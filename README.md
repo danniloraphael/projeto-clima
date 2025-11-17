@@ -19,30 +19,29 @@ Aplicação Django simples para visualizar o clima de cidades usando a API OpenW
 
 1. Clone o repositório:
 
-```powershell
+```shell
 git clone git@github.com:danniloraphael/projeto-clima.git
 cd projeto-clima
 ```
 
 2. Crie e ative um ambiente virtual (opcional):
 
-```powershell
+```shell
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 ```
 
 3. Instale as dependências:
 
-```powershell
+```shell
 pip install -r requirements.txt
 ```
 
 4. Crie o arquivo `.env` (recomendado) 
 
-No arquivo `.env` crie uma variável para a sua chave da api:
+No arquivo `.env` crie uma variável para a sua chave da api (sem aspas, sem 'export', apenas NOME=VALOR):
 
-```
-# Sem aspas, sem 'export', apenas NOME=VALOR
+```shell
 OPENWEATHER_API_KEY=Sua_Chave_Aqui
 ```
 
@@ -53,13 +52,13 @@ OPENWEATHER_API_KEY=Sua_Chave_Aqui
 
 6. Aplique as migrações:
 
-```powershell
+```shell
 python manage.py migrate
 ```
 
 7. Execute o servidor de desenvolvimento:
 
-```powershell
+```shell
 python manage.py runserver
 ```
 
