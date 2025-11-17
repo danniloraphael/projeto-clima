@@ -1,0 +1,79 @@
+:root {
+    --primary-color: #00272B;
+    --secondary-color: #5E747F;
+    --text-color: #ECFAE5;
+    --button-color: #7B9E87;
+    --button-hover-color: #7b9e87b6;
+    --error-color: #ff4c4c;
+    --card-hover-color: #006E90;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+input {
+    padding: 8px;
+    width: 20rem;
+    height: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 0.5rem;
+    border: none;
+}
+
+button {
+    padding: 10px;
+    width: 7rem;
+    height: 2.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"] {
+  background-color: var(--button-color);
+  color: var(--text-color);
+  transition: all 200ms ease-in-out;
+}
+
+button[type="submit"]:hover {
+  background-color: var(--button-hover-color);
+  color: var(--text-color);
+}
+
+.card {
+    margin-top: 20px;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 10px;
+    width: 350px;
+    background: var(--secondary-color);
+    color: var(--text-color);
+}
+
+.card:hover{
+    background: var(--card-hover-color);
+}
+
+.container {
+    margin-top: 4rem;
+    display: grid;
+    gap: 1rem;
+    place-items: center;
+}
+
+.error {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    background: var(--error-color);
+    color: white;
+}
+
+.icon img { 
+    vertical-align: middle; 
+}
