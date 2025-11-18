@@ -21,7 +21,6 @@ Aplicação Django simples para visualizar o clima de cidades usando a API OpenW
 
 ```shell
 git clone git@github.com:danniloraphael/projeto-clima.git
-cd projeto-clima
 ```
 
 2. Crie e ative um ambiente virtual (opcional):
