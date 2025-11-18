@@ -6,39 +6,44 @@
     <link rel="stylesheet" type="text/css" href="{% static 'weather/css/style.css' %}">
 </head>
 <body>
-    <h1>🌤️ Ver Clima Atual</h1>
-    <div class="container">
-        <div class="form-container">
-            <form method="POST">
-                {% csrf_token %}
-                <input type="text" 
-                name="city" 
-                placeholder="Digite a cidade" 
-                required 
-                value="{{ request.POST.city }}">
-                <button type="submit">Buscar</button>
-            </form>
+    <section class="section">
+        <h1>🌤️ Ver Clima Atual</h1>
+        <div class="container">
+            <div class="form-container">
+                <form method="POST">
+                    {% csrf_token %}
+                    <input type="text" 
+                    name="city" 
+                    placeholder="Digite a cidade" 
+                    required 
+                    value="{{ request.POST.city }}">
+                    <button type="submit">Buscar</button>
+                </form>
+            </div>
+
+            {% if error_msg %}
+                <div class="error">
+                    <p>{{ error_msg }}</p>
+                </div>
+            {% endif %}
+
+            {% if weather %}
+                <div class="card">
+                    <h2>Clima em {{ weather.city_name }}, {{ weather.country }}</h2>
+                    <p class='icon'>
+                        <img src="http://openweathermap.org/img/wn/{{ weather.icon }}@2x.png" alt="Ícone do clima">
+                        {{ weather.description }}
+                    </p>
+                    <p>🌡️ {{ weather.temperature }}°C</p>
+                    <p>💨 {{ weather.humidity }}% de umidade</p>
+                    <p>🌬️ {{ weather.wind_speed }} km/h de vento</p>
+                    <p>🕒 {{ weather.local_time }} ({{ weather.utc_offset }})</p>
+                </div>
+            {% endif %}
         </div>
-
-        {% if error_msg %}
-            <div class="error">
-                <p>{{ error_msg }}</p>
-            </div>
-        {% endif %}
-
-        {% if weather %}
-            <div class="card">
-                <h2>Clima em {{ weather.city_name }}, {{ weather.country }}</h2>
-                <p class='icon'>
-                    <img src="http://openweathermap.org/img/wn/{{ weather.icon }}@2x.png" alt="Ícone do clima">
-                    {{ weather.description }}
-                </p>
-                <p>🌡️ {{ weather.temperature }}°C</p>
-                <p>💨 {{ weather.humidity }}% de umidade</p>
-                <p>🌬️ {{ weather.wind_speed }} km/h de vento</p>
-                <p>🕒 {{ weather.local_time }} ({{ weather.utc_offset }})</p>
-            </div>
-        {% endif %}
-    </div>
+    </section>
+    <footer class="footer">
+        <a class="link" href="https://github.com/danniloraphael" target="_blank"> Dannilo Raphael - {% now "Y" %}.</a>
+    </footer>
 </body>
 </html>

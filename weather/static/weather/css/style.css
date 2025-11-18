@@ -16,6 +16,10 @@ body {
     color: var(--text-color);
 }
 
+.section {
+    height: 88vh;
+}
+
 input {
     padding: 8px;
     width: 20rem;
@@ -46,9 +50,9 @@ button[type="submit"]:hover {
 }
 
 .card {
-    margin-top: 20px;
+    margin: 20px 0 20px 0;
     display: inline-block;
-    padding: 10px;
+    padding: 5px;
     border-radius: 10px;
     width: 350px;
     background: var(--secondary-color);
@@ -62,7 +66,6 @@ button[type="submit"]:hover {
 .container {
     margin-top: 4rem;
     display: grid;
-    gap: 1rem;
     place-items: center;
 }
 
@@ -76,4 +79,18 @@ button[type="submit"]:hover {
 
 .icon img { 
     vertical-align: middle; 
+}
+
+.footer {
+    font-size: smaller;
+    text-align: left;
+}
+
+.link {
+    color: var(--button-color);
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: underline;
 }
