@@ -16,15 +16,11 @@ body {
     color: var(--text-color);
 }
 
-.section {
-    height: 88vh;
-}
-
 input {
     padding: 8px;
     width: 20rem;
     height: 1.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.4rem;
     border-radius: 0.5rem;
     border: none;
 }
@@ -36,6 +32,7 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+
 }
 
 button[type="submit"] {
@@ -47,6 +44,10 @@ button[type="submit"] {
 button[type="submit"]:hover {
   background-color: var(--button-hover-color);
   color: var(--text-color);
+}
+
+.section {
+    height: 88vh;
 }
 
 .card {
@@ -93,4 +94,14 @@ button[type="submit"]:hover {
 
 .link:hover {
     text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+    .card {
+        width: 90%;
+    }
+
+    button {
+        width: 21rem;
+    }
 }
