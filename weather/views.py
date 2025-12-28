@@ -25,13 +25,13 @@ def index(request):
             utc_string = city_tz.tzname(None)
 
             wind_speed_mps = data['wind']['speed']
-            wind_speed_kph = round(wind_speed_mps * 3.6, 2)
+            wind_speed_kph = int(wind_speed_mps * 3.6)
             
             weather = {
                 'city_name': data['name'],
                 'country': data['sys']['country'],
                 'icon': data['weather'][0]['icon'],
-                'temperature': data['main']['temp'],
+                'temperature': int(data['main']['temp']),
                 'description': data['weather'][0]['description'].capitalize(),
                 'humidity': data['main']['humidity'],
                 'local_time': local_time.strftime('%H:%M'),
