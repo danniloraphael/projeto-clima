@@ -2,7 +2,7 @@
 
 Aplicação Django simples para visualizar o clima de cidades usando a API OpenWeatherMap.
 
-**Resumo:** Esta aplicação permite buscar a previsão/clima atual de uma cidade e exibir informações básicas (temperatura, descrição, ícone, umidade e hora local) via uma interface web.
+**Resumo:** Esta aplicação permite buscar a previsão/clima atual de uma cidade e exibir informações básicas (temperatura, descrição, ícone, velocidade do vento, umidade e hora local) via uma interface web.
 
 **Tecnologias:**
 - Python 3.x
@@ -75,3 +75,7 @@ Abra `http://127.0.0.1:8000/` no navegador para usar a aplicação.
 - `weather/` — app principal (models, views, templates, static)
 - `templates/weather/index.html` — página principal
 - `static/weather/css/style.css` — estilos
+
+## Acesso online
+
+A aplicação foi hospedada no Render e pode ser acessada pelo link: https://clima-app-kwyc.onrender.com/
